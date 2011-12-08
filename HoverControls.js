@@ -42,6 +42,8 @@ THREE.HoverControls = function (object, domElement) {
 
     this.update = function(jumpTo) {
 
+        if (!_this.enabled) return;
+        
         jumpTo = jumpTo || false;
 
         if (_this.tiltAngle != _currentTiltAngle || _this.panAngle != _currentPanAngle) {
